@@ -15,6 +15,9 @@ app.use('/test', (req, res) => {
     })
 });
 
+// endpoints
+app.use("/api", bannerRoutes)
+
 app.listen(PORT, () => {
     console.log("app is running on PORT : ", PORT);
 })
