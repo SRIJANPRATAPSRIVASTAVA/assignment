@@ -1,0 +1,87 @@
+:root {
+  --primary-color: #6a35d4;
+  --secondary-color: #7b5ee6;
+  --background-color: #1e1e2e;
+  --card-background: #2a2a3c;
+  --text-color: #ffffff;
+  --secondary-text: #9892a6;
+  --input-background: #3a3a4c;
+  --success-color: #4caf50;
+  --error-color: #f44336;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.banner {
+  width: 450px;
+  height: 250px;
+  background-color: var(--card-background);
+  padding: 30px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 1.5em;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.banner a {
+  color: #e0e0e0;
+  background-color: #4a4a66;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.banner a:hover {
+  background-color: #5b5b81;
+}
+
+.banner img {
+  height: inherit;
+}
+
+.timer {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.admin-button {
+  background-color: var(--card-background);
+  color: #ffffff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-top: 30px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.admin-button:hover {
+  background-color: #a583d4;
+  transform: translateY(-2px);
+}

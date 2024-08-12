@@ -1,0 +1,157 @@
+:root {
+  --primary-color: #6a35d4;
+  --secondary-color: #7b5ee6;
+  --background-color: #1e1e2e;
+  --card-background: #2a2a3c;
+  --text-color: #ffffff;
+  --secondary-text: #9892a6;
+  --input-background: #3a3a4c;
+  --success-color: #4caf50;
+  --error-color: #f44336;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard form {
+  background-color: var(--card-background);
+  border-radius: 5px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard label {
+  display: block;
+  margin-bottom: 1.5rem;
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+}
+
+.dashboard input[type="text"],
+.dashboard input[type="url"],
+.dashboard input[type="number"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--input-background);
+  color: var(--text-color);
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.dashboard .toggle-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard .toggle-label {
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+  margin-right: 1rem;
+}
+
+.dashboard .toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.dashboard .toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.dashboard .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.dashboard .slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.dashboard input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+.dashboard input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.dashboard button[type="submit"] {
+  width: 100%; /* Same width as input fields */
+  padding: 1rem;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loading {
+  background-color: #3a3a4c;
+}
+
+.dashboard button[type="submit"]:hover {
+  background-color: var(--primary-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .dashboard form {
+    padding: 1.5rem;
+  }
+}
+
+/* Optional: Add some animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

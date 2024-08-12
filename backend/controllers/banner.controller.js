@@ -13,7 +13,6 @@ exports.getBanner = async (req, res) => {
 // Update banner details
 exports.updateBanner = async (req, res) => {
     const { description, timer, link, visible } = req.body;
-
     try {
         await Banner.updateBanner(description, timer, link, visible);
         res.status(201).json({ message: 'Banner updated successfully' });
